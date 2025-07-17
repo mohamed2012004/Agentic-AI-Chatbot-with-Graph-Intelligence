@@ -1,0 +1,9 @@
+langchain==0.1.20
+langchain_core==0.1.52
+langgraph>=0.0.33,<0.1
+langchain_community>=0.0.24,<0.1
+langchain_groq>=0.0.1,<0.1
+langchain_openai>=0.1.0,<0.2
+faiss-cpu==1.7.4
+streamlit>=1.33.0,<2.0
+tavily-python>=0.3.0,<1.0
