@@ -2,6 +2,7 @@ from langgraph.graph import StateGraph,START,END
 from src.langgraphagenticai.state.state import State
 from src.langgraphagenticai.nodes.basic_chatbot_node import BasicChatbotNode
 
+
 class GraphBuilder:
     def __init__(self,model):
         self.llm=model
@@ -15,11 +16,19 @@ class GraphBuilder:
         entry and exit point of the graph.
         """
 
-        
-        self.graph_builder.add_node("chatbot",BasicChatbotNode(self.llm).process)
-        self.graph_builder.add_edge(START,"chatbot")
-        self.graph_builder.add_edge("chatbot",END)     
-    
+        Chatbot = BasicChatbotNode(self.llm)
+        self.graph_builder.add_node("orchestrator", Chatbot.orchestrator)
+        self.graph_builder.add_node("llm_call", Chatbot.llm_call)
+        self.graph_builder.add_node("synthesizer", Chatbot.synthesizer)
+        self.graph_builder.add_edge(START, "orchestrator")
+        self.graph_builder.add_conditional_edges(
+        "orchestrator", Chatbot.assign_workers, ["llm_call"]
+            )
+
+# add_conditional_edges("orschestrator", assign_workers, ["llm_call"])
+        self.graph_builder.add_edge("llm_call", "synthesizer")
+        self.graph_builder.add_edge("synthesizer", END)
+
     def setup_graph(self,usecase:str):
         """
         Sets up the graph for the selected use case.
