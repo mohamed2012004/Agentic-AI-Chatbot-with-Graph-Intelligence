@@ -60,16 +60,4 @@ Automatically summarizes the top 5 news articles globally, categorized by freque
 - You can integrate the system with many external tools (e.g., web search, file storage, APIs, databases) to extend functionality.  
 
 ---
-src/
-├── langgraphagenticai/
-│   ├── graph/                 # Builds and visualizes LangGraph flow logic
-│   ├── LLMs/                  # Handles LLM interaction (Groq models, etc.)
-│   ├── nodes/                 # Contains nodes used within LangGraph (AI News, Chatbot)
-│   ├── state/                 # Stores TypedDict-based state definitions per use case
-│   ├── tools/                 # Custom tools like search integrations (Tavily, etc.)
-│   └── ui/                    # UI components for Streamlit (displays, config)
-│
-├── app.py                     # Streamlit entrypoint for launching the app
-├── main.py                    # Main script for loading LangGraph app logic
-├── README.md                  # Project documentation and setup
-├── requirements.txt           # Python dependencies
+<pre> src/ ├── langgraphagenticai/ │ ├── graph/ # Builds and visualizes LangGraph flow logic │ ├── LLMs/ # Handles LLM interaction (Groq models, etc.) │ ├── nodes/ # Contains nodes used within LangGraph (AI News, Chatbot) │ ├── state/ # Stores TypedDict-based state definitions per use case │ ├── tools/ # Custom tools like search integrations (Tavily, etc.) │ ├── ui/ # UI components for Streamlit (displays, config) ├── app.py # Streamlit entrypoint for launching the app ├── main.py # Main script for loading LangGraph app logic ├── README.md # Project documentation and setup ├── requirements.txt # Python dependencies </pre>
