@@ -5,11 +5,8 @@ This project demonstrates advanced multi-agent AI workflows using the **Groq API
 
 ## [Demo](https://drive.google.com/file/d/1MGvH6rxDsuHtYvsq9A8o1ss99NYvRlLE/view?usp=sharing)
 
----
 
 ## ✅ Use Cases
-
----
 
 ### 🤖 Report Generation Chatbot (Orchestrator + Workers)
 
@@ -21,7 +18,6 @@ A powerful chatbot that dynamically generates detailed reports on any topic.
 
 ![Orchestrator Workflow](https://github.com/user-attachments/assets/6ad7e41a-85fd-44fd-9973-a6b2b0c95e00)
 
----
 
 ### 🌐 Web-Integrated Chatbot (Tavily + ReAct)
 
@@ -33,7 +29,6 @@ An AI assistant that answers real-time queries using current web search results.
 
 ![ReAct Reasoning Flow](https://github.com/user-attachments/assets/f932cc5d-f05e-4714-a720-14ab777e5063)
 
----
 
 ### 📰 AI News Summarizer
 
@@ -47,7 +42,6 @@ An automated system that fetches and summarizes the top 5 global news articles b
 
 ![AI News Summary Pipeline](https://github.com/user-attachments/assets/aa1fd89d-c6c5-44b3-83f6-a63921989722)
 
----
 
 ## 💡 Technologies Used
 
@@ -57,7 +51,6 @@ An automated system that fetches and summarizes the top 5 global news articles b
 - **ReAct Framework** – Reasoning-based decision making  
 - **Streamlit** – UI for real-time interactions
 
----
 
 ## 📌 Highlights
 
@@ -65,7 +58,6 @@ An automated system that fetches and summarizes the top 5 global news articles b
 - The project supports **Reflection** as an alternative to ReAct for deeper reasoning.
 - Easy to **extend with external tools**: APIs, databases, custom agents, and more.
 
----
 
 ## 📁 Project Structure
 ```plaintext
