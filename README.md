@@ -37,14 +37,12 @@ This chatbot answers real-time questions using live web data.
 Automatically summarizes the top 5 news articles globally, categorized by frequency: **daily**, **weekly**, and **monthly**.
 
 - **Pipeline**:
-  1. `fetch_news`: Retrieves top articles via Tavily  
-  2. `summary_news`: Summarizes articles using Groq models  
-  3. `save_results`: Stores summaries in a markdown file  
+  1. **fetch_news**: Retrieves top articles via Tavily  
+  2. **summary_news**: Summarizes articles using Groq models  
+  3. **save_results**: Stores summaries in a markdown file  
 
-> 📄 Example output file: `./AINews/daily_summary.md`
+<img width="169" height="453" alt="AI News Summary Pipeline" src="https://github.com/user-attachments/assets/aa1fd89d-c6c5-44b3-83f6-a63921989722" />
 
-> /
-<img width="169" height="453" alt="Image" src="https://github.com/user-attachments/assets/aa1fd89d-c6c5-44b3-83f6-a63921989722" />
 ---
 
 #### 💡 Technologies Used
@@ -58,8 +56,8 @@ Automatically summarizes the top 5 news articles globally, categorized by freque
 
 #### 📌 Notes
 
-- You can run each use case independently.
-- News summaries are stored in markdown files for easy access and viewing.
+- You can run each use case independently.  
+- News summaries are stored in markdown files for easy access and viewing.  
 - Models are selected based on performance and task complexity.
 
 ---
@@ -67,4 +65,3 @@ Automatically summarizes the top 5 news articles globally, categorized by freque
 #### 📬 Contact
 
 For questions or collaborations, feel free to reach out via [LinkedIn](https://www.linkedin.com/) or email.
-
