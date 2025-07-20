@@ -3,7 +3,7 @@ from langchain_core.messages import HumanMessage,SystemMessage
 from langgraph.constants import Send
 
 
-class BasicChatbotNode:
+class ReportChatbotNode:
     """A node representing a basic chatbot in the graph."""
     def __init__(self, model):
         self.llm=model

@@ -5,12 +5,6 @@ from typing import List
 from pydantic import BaseModel, Field
 import operator
 
-# class State(TypedDict):
-#     """
-#     Represents the  structure  of the state used in graph
-#     """
-#     messages:Annotated[list,add_messages]
-
 class Section(BaseModel):
     name:str=Field(description="Name for this section of the report")
     description:str=Field(description="Brief Overview of the main topics and concepts of the section")
@@ -28,7 +22,6 @@ class State(TypedDict):
     ]  # All workers write to this key in parallel
     final_report: str  # Final report
 
-# Worker state
 class WorkerState(TypedDict):
     section: Section
     completed_sections: Annotated[list, operator.add]
