@@ -5,6 +5,9 @@ This project demonstrates advanced multi-agent AI workflows using the **Groq API
 
 ## [Demo](https://drive.google.com/file/d/1MGvH6rxDsuHtYvsq9A8o1ss99NYvRlLE/view?usp=sharing)
 
+##[App](https://agenticchat.streamlit.app/)
+
+
 
 ## ✅ Use Cases
 
@@ -76,4 +79,3 @@ src/
 ├── requirements.txt # Python dependencies
 
 ---
-
