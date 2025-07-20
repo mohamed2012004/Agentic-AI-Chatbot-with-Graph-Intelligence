@@ -43,6 +43,8 @@ Automatically summarizes the top 5 news articles globally, categorized by freque
 
 > 📄 Example output file: `./AINews/daily_summary.md`
 
+> /
+<img width="169" height="453" alt="Image" src="https://github.com/user-attachments/assets/aa1fd89d-c6c5-44b3-83f6-a63921989722" />
 ---
 
 #### 💡 Technologies Used
