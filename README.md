@@ -1,63 +1,80 @@
-#### 🚀 Agentic AI Project
+# 🚀 Agentic AI Project
 
-This project demonstrates advanced AI workflows using the **Groq API**, which leverages **LPU (Language Processing Units)** for ultra-fast inference. I utilized three Groq-hosted models and built intelligent workflows using **LangGraph**, **Tavily**, and the **ReAct** framework.
-
----
-
-#### ✅ Use Cases
+This project demonstrates advanced multi-agent AI workflows using the **Groq API**, which leverages **Language Processing Units (LPUs)** for ultra-fast inference. It integrates state-of-the-art tools like **LangGraph**, **Tavily**, and the **ReAct** framework to power intelligent, modular use cases.
 
 ---
 
-#### 🤖 Report Generation Chatbot (Orchestrator + Workers)
-
-This chatbot generates detailed reports on any topic provided by the user.
-
-- **Workflow**: Orchestrator-Workers using LangGraph  
-- **How it works**: A central LLM dynamically decomposes the task into subtasks, distributes them to 5 specialized worker LLMs, and combines their outputs into a single report.  
-- **Best for**: Complex queries where subtasks aren't predefined.
-
-<img width="138" height="450" alt="Orchestrator Workflow" src="https://github.com/user-attachments/assets/6ad7e41a-85fd-44fd-9973-a6b2b0c95e00" />
+## ✅ Use Cases
 
 ---
 
-#### 🌐 Chatbot Integrated with Web Search (Tavily + ReAct)
+### 🤖 Report Generation Chatbot (Orchestrator + Workers)
 
-This chatbot answers real-time questions using live web data.
+A powerful chatbot that dynamically generates detailed reports on any topic.
 
-- **Tool**: Tavily (for real-time web search)  
-- **Framework**: ReAct (Reasoning + Acting)  
-- **How it works**: Uses reasoning steps and action plans to search and answer based on current information.
+- **Architecture**: Orchestrator-Worker model built with LangGraph  
+- **Mechanism**: A central orchestrator LLM breaks down the user request into subtasks, sends each to a specialized worker LLM, then merges their outputs into one cohesive report.  
+- **Best suited for**: Complex, multi-step tasks.
 
-<img width="226" height="260" alt="ReAct Reasoning Flow" src="https://github.com/user-attachments/assets/f932cc5d-f05e-4714-a720-14ab777e5063" />
+![Orchestrator Workflow](https://github.com/user-attachments/assets/6ad7e41a-85fd-44fd-9973-a6b2b0c95e00)
 
 ---
 
-#### 📰 AI News Summary
+### 🌐 Web-Integrated Chatbot (Tavily + ReAct)
 
-Automatically summarizes the top 5 news articles globally, categorized by frequency: **daily**, **weekly**, and **monthly**.
+An AI assistant that answers real-time queries using current web search results.
 
+- **Tool**: Tavily – for fast, real-time web results  
+- **Framework**: ReAct (Reason + Act)  
+- **How it works**: The agent reasons through the query, takes search actions, and combines findings into informative responses.
+
+![ReAct Reasoning Flow](https://github.com/user-attachments/assets/f932cc5d-f05e-4714-a720-14ab777e5063)
+
+---
+
+### 📰 AI News Summarizer
+
+An automated system that fetches and summarizes the top 5 global news articles based on selected frequency:
+
+- **Frequencies**: `daily`, `weekly`, `monthly`  
 - **Pipeline**:
-  1. **fetch_news**: Retrieves top articles via Tavily  
-  2. **summary_news**: Summarizes articles using Groq models  
-  3. **save_results**: Stores summaries in a markdown file  
+  1. `fetch_news`: Retrieves articles using Tavily  
+  2. `summary_news`: Summarizes them using Groq models  
+  3. `save_results`: Stores the result in markdown files  
 
-<img width="169" height="453" alt="AI News Summary Pipeline" src="https://github.com/user-attachments/assets/aa1fd89d-c6c5-44b3-83f6-a63921989722" />
-
----
-
-#### 💡 Technologies Used
-
-- **Groq API** – for ultra-fast LLM inference  
-- **LangGraph** – for multi-agent workflows  
-- **Tavily** – real-time web search integration  
-- **ReAct Framework** – for reasoning-based decision-making  
+![AI News Summary Pipeline](https://github.com/user-attachments/assets/aa1fd89d-c6c5-44b3-83f6-a63921989722)
 
 ---
 
-#### 📌 Notes
-- You can run each use case independently.  
-- You can use the **Reflection** framework as an alternative to **ReAct** for enhanced reasoning and decision-making.  
-- You can integrate the system with many external tools (e.g., web search, file storage, APIs, databases) to extend functionality.  
+## 💡 Technologies Used
+
+- **Groq API** – Ultra-fast LLM inference using LPUs  
+- **LangGraph** – Agentic workflow orchestration  
+- **Tavily** – Real-time web search  
+- **ReAct Framework** – Reasoning-based decision making  
+- **Streamlit** – UI for real-time interactions
 
 ---
-<pre> src/ ├── langgraphagenticai/ │ ├── graph/ # Builds and visualizes LangGraph flow logic │ ├── LLMs/ # Handles LLM interaction (Groq models, etc.) │ ├── nodes/ # Contains nodes used within LangGraph (AI News, Chatbot) │ ├── state/ # Stores TypedDict-based state definitions per use case │ ├── tools/ # Custom tools like search integrations (Tavily, etc.) │ ├── ui/ # UI components for Streamlit (displays, config) ├── app.py # Streamlit entrypoint for launching the app ├── main.py # Main script for loading LangGraph app logic ├── README.md # Project documentation and setup ├── requirements.txt # Python dependencies </pre>
+
+## 📌 Highlights
+
+- Each use case runs **independently**, offering modularity.
+- The project supports **Reflection** as an alternative to ReAct for deeper reasoning.
+- Easy to **extend with external tools**: APIs, databases, custom agents, and more.
+
+---
+
+## 📁 Project Structure
+src/
+├── langgraphagenticai/
+│ ├── graph/ # LangGraph flow builders
+│ ├── LLMs/ # Groq-based language models
+│ ├── nodes/ # Functional nodes (AI News, Chatbot, etc.)
+│ ├── state/ # TypedDict definitions for states
+│ ├── tools/ # Tools like Tavily for search
+│ ├── ui/ # Streamlit UI components
+├── app.py # Streamlit entry point
+├── main.py # LangGraph app logic loader
+├── README.md # Project documentation
+├── requirements.txt # Python dependencies
+
