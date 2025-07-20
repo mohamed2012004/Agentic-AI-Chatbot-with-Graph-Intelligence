@@ -65,6 +65,8 @@ An automated system that fetches and summarizes the top 5 global news articles b
 ---
 
 ## 📁 Project Structure
+```plaintext
+
 src/
 ├── langgraphagenticai/
 │ ├── graph/ # LangGraph flow builders
@@ -78,3 +80,4 @@ src/
 ├── README.md # Project documentation
 ├── requirements.txt # Python dependencies
 
+---
